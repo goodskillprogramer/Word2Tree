@@ -1,9 +1,9 @@
-# Cluster English word to tree by word2vec#
+# Cluster English word to tree by word2vec #
 
 ## 知乎详解（detail explain from Zhihu） ##
   * https://zhuanlan.zhihu.com/p/40741865
 
-##details##
+## details ##
 Word2vec can be used to generate word vector(word embeding),the distance between these vectors inflect the word’s relationship .A very interesting phenomenal is these vectors can be added and minused in the formulation.For example: vector('Paris') - vector('France') +
 vector('Italy') equals vector('Rome'), vector('king') - vector('man') + vector('woman') equals vector('queen').
  
@@ -33,12 +33,39 @@ After we got the word vectore,we can use certain method to do clustering.Most pe
 
 The whole word cluster tree is very large.In order to display it properly,I split it to manly sub-trees.And each sub-treee should not large then 400.There are about 50-60 sub-trees after spliting.I manuly checke them and foud some intersting thing here.
 
+## please click the link to see the cluster tree.##
 
-[linking verb](https://pic4.zhimg.com/80/v2-bf54aeec483700a8c383eb5a2919458a_hd.jpg)
+[linking verb ](https://pic4.zhimg.com/80/v2-bf54aeec483700a8c383eb5a2919458a_hd.jpg)
 
 [words related to creation ](https://pic2.zhimg.com/80/v2-582dbe35470bb8feb972ff09396875ed_hd.jpg)
 
+[words related to experiment ](https://pic2.zhimg.com/v2-9a959a2ca63b0558a8e151d046225bc6_r.jpg)
 
+[f**king words and marriage  ](https://pic1.zhimg.com/80/v2-7a880aa0ab9eb854f56e0a88d5f297c7_hd.jpg)
+
+[datetime ](https://pic4.zhimg.com/v2-931616b2cab87b341b278cc91d4b56b0_r.jpg)
+
+[Tv station  ](https://pic3.zhimg.com/v2-e3cda40ba1bc755c9a6f992502a17c8b_r.jpg)
+
+[country ](https://pic4.zhimg.com/v2-3407a315fb3b3e4deae8c02cacb8d8d2_r.jpg)
+
+[body and weapons](https://pic2.zhimg.com/80/v2-4107c23dc36b376062144d0ae9606cd5_hd.jpg)
+
+[car brand](https://pic2.zhimg.com/80/v2-68a5f6aaa16fcffa37d24a887c150793_hd.jpg)
+
+[stationery](https://pic4.zhimg.com/v2-f5c147af541a0038fefa331c880d38b7_r.jpg)
+
+[demography](https://pic1.zhimg.com/80/v2-95d3aaadfed8273669e14be2a2ffe3c4_hd.jpg)
+
+[office](https://pic2.zhimg.com/v2-51b508f841f5a5759f1a76425e3b20de_r.jpg)
+
+[transportation](https://pic1.zhimg.com/v2-46267d2356474e3eac995051b156ff5d_r.jpg)
+
+[cities](https://pic1.zhimg.com/v2-9d3cd3794ea5c3c63f787c53d17bc3ef_r.jpg)
+
+
+
+    #parse linkage results 
 	from scipy.cluster.hierarchy import dendrogram, linkage
 
 	def hierarchical_cluster(centers,wods):    
